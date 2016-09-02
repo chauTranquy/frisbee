@@ -1,0 +1,20 @@
+<header>
+			<div class="nav navbar-default" style="position:relative">
+			  <ul class="nav navbar-nav" >
+			  	<li routerLinkActive="active"><a href="" routerLink="/teams">&Eacute;quipes</a></li>
+			  	<li routerLinkActive="active"><a href="" routerLink="/matchs" routerLinkActive="active">Match</a></li>
+			  </ul>
+			<div class="pull-right" style="position:absolute; top:50%; transform: translateY(-50%); right:20px;font-size:12px;">
+				<em class="fa fa-database"></em>
+				Acc&egrave;s &agrave; la base {{dbName}}
+				<em class="fa fa-times" style="color:red" *ngIf="!dbEnable"></em>
+				<em class="fa fa-check" style="color:green" *ngIf="dbEnable"></em>
+			</div>
+			<div class="clearfix"></div>
+			
+		</div>			
+		</header>
+		
+		=>{{(records$ | async)?.length}}
+<router-outlet></router-outlet>
+<simple-notifications [options]="options"></simple-notifications>

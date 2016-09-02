@@ -1,0 +1,10 @@
+
+
+<div class="col-md-8">	
+		<button (click)="addTeam()">New Team</button>
+			<span class="badge">{{numTeams}}</span>
+ <div *ngFor="let record of records$ | async">
+        {{record.id_team}} {{ record.name }} <button (click)="deleteTeam(record.id_team)">x</button>
+      </div>
+      
+</div><div class="col-md-4">ok</div>
